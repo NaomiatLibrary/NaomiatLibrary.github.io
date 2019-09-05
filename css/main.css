@@ -1,0 +1,51 @@
+/*https://coeure.co.jp/blog/homepage/homepage_180501_05*/
+header{
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left:0px;
+  width:100%;
+  text-align: center;
+  background-color:#ffffff;
+}
+li a{display:block;}
+a.topbutton{
+  padding : 10px;
+  margin: 10px;
+  width:200px;
+  border: medium solid #000000;
+  border-radius: 30px;
+  background-color:#ffffff;
+  font: bold large/150% "ＭＳ 明朝";
+  color:#000000;
+  text-decoration:none;
+}
+t
+a.topbothover {/*マウスをのせたとき*/
+  background-color:#ff0000;
+  font-style:normal;
+  text-decoration:underline;
+}
+a:active.topbutton {/*クリック中*/
+  text-decoration:none;
+}
+
+/* end of header */
+
+
+body{ 
+  z-index: 1;
+  top: 10000px;
+  background-color: #f0d1e4;
+  font-size: 87.5%;
+  font-family: arial;
+  line-height: 1.5;
+  text-align: left;
+}
+ 
+
+#mdbody{
+  width: 70%;
+  height: 70%;
+  background-color:#999933;
+} 

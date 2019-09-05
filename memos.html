@@ -1,0 +1,33 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>NaomiatLibrary</title>
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="css/main.css" type="text/css"/>
+    <link rel="stylesheet" href="css/main.shell.css" type="text/css"/>
+
+    <!-- third-party javascript -->
+    <script src="js/jq/jquery-3.4.1.js"></script>
+    <script src="js/jq/jquery.uriAnchor.js"></script>
+
+    <!-- javascript -->
+    <script src="js/main.js"      ></script>
+    <script src="js/main.shell.js"></script>
+    <script>
+        $(function () { 
+            
+            console.log("hi!");
+            printMarkdown.initModule( $('#mdbody') );
+        });
+    </script>
+</head>
+<script>printHeader();</script>
+<body class="body">
+    body
+    <div id="mdbody">
+        mdbody
+    </div> 
+</body>
+</html>
