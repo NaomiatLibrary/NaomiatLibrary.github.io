@@ -81,7 +81,7 @@ a.topbutton:active {/*クリック中*/
 
 #mdbody{
   width: 70%;
-  height: 70%;
-  background-color:#999933;
+  height: auto;
+  border: 3px solid black;
   
 } 

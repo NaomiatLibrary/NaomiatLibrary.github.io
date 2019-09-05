@@ -9,43 +9,8 @@
   regexp : true,    sloppy : true,       vars : false,
   white  : true
 */
-/*global $, spa */
 
-/*
-const marked = require('marked')
-const markdown = '# heading\n' +
-  '## list\n' +
-  '- list1\n' +
-  '- list2\n\n' +
-  '## code\n' +
-  '```js\n' +
-  'let x = 1;\n' +
-  '```\n' +
-  '## table\n' +
-  '| col1 | col2 |\n' +
-  '---|---\n' +
-  'abc|123\n' +
-  'xyz|456';
-*/
-/*
-//ダイアログでファイルが選択された時
-obj1.addEventListener("change",function(evt){
 
-  var file = evt.target.files;
-
-  //FileReaderの作成
-  var reader = new FileReader();
-  //テキスト形式で読み込む
-  reader.readAsText(file[0]);
-  
-  //読込終了後の処理
-  reader.onload = function(ev){
-    //テキストエリアに表示する
-    document.test.txt.value = reader.result;
-  }
-},false);
-console.log(marked(markdown))
-*/
 /*copy paste*/
 /*
 var printMarkdown = (function( $ ) {
@@ -107,16 +72,42 @@ function printHeader() {
     );
 }
 
+const markdown = '# heading\n' +
+  '## list\n' +
+  '- list1\n' +
+  '- list2\n\n' +
+  '## code\n' +
+  '```js\n' +
+  'let x = 1;\n' +
+  '```\n' +
+  '$x+y=2^n$\n' +
+  '## table\n' +
+  '| col1 | col2 |\n' +
+  '---|---\n' +
+  'abc|123\n' +
+  'xyz|456';
+
+
+marked.setOptions({
+  langPrefix: ''
+});
 var printMarkdown = (function () {
   var initModule = function ( $container ) {
     $container.html(
-      '<h1 style="display:inline-block; margin:25px;">'
-        + 'hello world!'
-      + '</h1>'
+      "test of printmarkdown"
+      +marked(markdown)
     );
-  };
-
-  return { initModule: initModule };
+  }
+  var printChosenmd =  function ($container) {
+    var ajax = new XMLHttpRequest();
+    ajax.open("get", "../Memos/read_papers/test.md");
+    ajax.send();
+    ajax.addEventListener("load", function(){ 
+      console.log(this); // 通信結果を出力します。
+      $container.html(marked(this.response));
+    }, false);
+  }
+  return { initModule: initModule, printChosenmd:printChosenmd };
 }());
 
 
