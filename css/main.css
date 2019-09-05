@@ -1,46 +1,81 @@
-/*https://coeure.co.jp/blog/homepage/homepage_180501_05*/
-header{
-  position: absolute;
-  z-index: 1;
-  top: 0px;
-  left:0px;
-  width:100%;
-  text-align: center;
-  background-color:#ffffff;
+
+html{ 
+  height: 100vh; 
 }
-li a{display:block;}
+body{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items:stretch;
+  background-color: #f0d1e4;
+  height:100vh;
+  text-align: center;
+}
+
+header{
+  width: 90%;
+  z-index:0;
+  position: absolute;
+  height:45pt;
+  text-align: center;
+}
+header div.logo{
+  font-size: 250%;
+}
+header div.buttons{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items:center;
+  justify-content: space-around;
+}
+
 a.topbutton{
+  z-index:1;
   padding : 10px;
-  margin: 10px;
-  width:200px;
   border: medium solid #000000;
   border-radius: 30px;
   background-color:#ffffff;
-  font: bold large/150% "ＭＳ 明朝";
+  font-family: cursive;
+  font-size: large;
+  font-weight: bold;
   color:#000000;
   text-decoration:none;
 }
-t
-a.topbothover {/*マウスをのせたとき*/
-  background-color:#ff0000;
-  font-style:normal;
-  text-decoration:underline;
+
+a.topbutton:hover {/*マウスをのせたとき*/
+  z-index:2;
+  background-color:#f3d6a0;
 }
-a:active.topbutton {/*クリック中*/
-  text-decoration:none;
+a.topbutton:active {/*クリック中*/
+  z-index:2;
+  background-color:#f5bd56;
 }
 
 /* end of header */
 
-
-body{ 
-  z-index: 1;
-  top: 10000px;
-  background-color: #f0d1e4;
-  font-size: 87.5%;
-  font-family: arial;
-  line-height: 1.5;
+.toppage{/*insert  picture or so*/
+  margin-top: 128px;
+  background-color: #000000;
+  width: calc(100% - 10px);
+  color:white;
+}
+.menu{
+  height:100%;
+  overflow-y: scroll;
+  background-color: #a83c3c;
+  width: 200px;
+  margin-top: 128px;
+  float : left;
+  border-radius: 10px;
+  border: 3px double pink;
+}
+.main{
+  background-color: #ffffff;
+  width: 80%;
+  min-height:100%;
+  margin-top:  128px;
   text-align: left;
+  float : right;
+  overflow: scroll;
 }
  
 
@@ -48,4 +83,5 @@ body{
   width: 70%;
   height: 70%;
   background-color:#999933;
+  
 } 

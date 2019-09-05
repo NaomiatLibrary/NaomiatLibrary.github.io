@@ -92,15 +92,18 @@ var printMarkdown = (function( $ ) {
 function printHeader() {
   document.write (
     '<header>'
-      + '<ul style="list-style: none;display: inline-block;">'
-        + '<li><a class="topbutton" href="./index.html">Top</a></li>'
-        + '<li><a class="topbutton" href="./about_naomi.html">About "Naomi"</a></li>'
-        + '<li><a class="topbutton" href="./projects.html">Projects</a></li>'
-        + '<li><a class="topbutton" href="./memos.html">Memos</a></li>'
-        + '<li><a class="topbutton" href="./garally.html">Garally</a></li>'
-        + '<li><a class="topbutton" href="./contacts.html">Contacts</a></li>'
-      + '</ul>'
-      + '</header>'
+      + '<div class="logo">'
+        +"LOGO"
+      + '</div>'
+      + '<div class="buttons">'
+        + '<a class="topbutton" href="./index.html">Top</a>'
+        + '<a class="topbutton" href="./about_naomi.html">"Naomi"</a>'
+        + '<a class="topbutton" href="./projects.html">Projects</a>'
+        + '<a class="topbutton" href="./memos.html">Memos</a>'
+        + '<a class="topbutton" href="./garally.html">Garally</a>'
+        + '<a class="topbutton" href="./contacts.html">Contacts</a>'
+      + '</div>'
+    + '</header>'
     );
 }
 
