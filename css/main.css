@@ -1,0 +1,60 @@
+
+html{ 
+  height: 100vh; 
+}
+body{
+  display: flex;
+  align-items:stretch;
+  background-color: #e7edf9;
+  text-align: center;
+}
+
+body a{
+  text-decoration: none;
+  color:red;
+}
+body h1{
+  color:black;
+}
+.clightblue{
+  color: #0099ff;
+}
+header{
+  margin:0px;
+  width: 100%;
+  z-index:2;
+  position: fixed;
+  height:45pt;
+  text-align: center;
+  background-color: rgba(00,00,00,0.9);
+}
+header a{
+  color:white;
+  text-decoration: none;
+  font-family:fantasy;
+  margin: 0px 20px;
+}
+header li{
+  display: inline;
+}
+
+.mainimg{
+  margin: 0 0 0 auto;
+}
+.messagebox{
+  background: white;
+  background: rgba(255,255,255,0.9);
+  width : 70%;
+  margin: 30px auto 30px;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: left;
+}
+.messagebox h1{
+  border-bottom: 1px solid;
+  text-align: center;
+}
+.messagebox h2{
+  text-align: left;
+  font-size: 20px;
+}
